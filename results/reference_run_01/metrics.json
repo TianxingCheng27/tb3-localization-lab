@@ -1,0 +1,157 @@
+{
+  "alignment": "Each trajectory uses its own inverse initial SE(2) pose at t0; relative-motion evaluation only. No full-trajectory fitting.",
+  "alignment_time_ns": 805100000000,
+  "evaluation_start_ns": 806100000000,
+  "evaluation_end_ns": 857950000000,
+  "read_guard_s": 0.1,
+  "evaluation_sampling": "Unique GT header timestamps within the evaluation interval.",
+  "evaluation_samples": 2593,
+  "position_rmse_m": 0.007299655536339953,
+  "endpoint_position_error_m": 0.006049549438989322,
+  "heading_rmse_deg": 0.10465388429165173,
+  "endpoint_heading_error_deg": -0.15517021059083147,
+  "maximum_position_error_m": 0.012417399635028699,
+  "raw_initial_poses_x_m_y_m_yaw_rad": {
+    "/ground_truth/pose": [
+      -0.014231723012126322,
+      3.0993963569420524e-11,
+      -2.777298196495234e-08
+    ],
+    "/odom_est": [
+      -5.680511221924171e-16,
+      1.1169485910766074e-26,
+      6.115937219670687e-16
+    ]
+  },
+  "raw_initial_odom_minus_gt": [
+    0.014231723012125755,
+    -3.099396356942051e-11,
+    2.777298257654606e-08
+  ],
+  "raw_initial_difference_note": "Raw coordinate-value diagnostic; interpret only if the original frames are comparable. Not a calibrated transform.",
+  "aligned_endpoint_x_m_y_m_yaw_rad": {
+    "/ground_truth/pose": [
+      3.9596631635405095,
+      1.9859055711963154,
+      0.0010376181220635395
+    ],
+    "/odom_est": [
+      3.9583381398844213,
+      1.9800029141060227,
+      -0.0016706129537594446
+    ]
+  },
+  "reference_point_assumption": "Assumes the Gazebo model origin and odometry base reference coincide in the plane; verify the model configuration.",
+  "duplicate_policy": "Preserve all raw rows; keep the last equivalent timestamp for interpolation. Conflicting planar duplicates are rejected.",
+  "topic_checks": {
+    "/ground_truth/pose": {
+      "raw_samples": 2653,
+      "unique_samples": 2653,
+      "duplicate_header_timestamps": 0,
+      "backwards_header_timestamps": 0,
+      "frame_id": "default",
+      "child_frame_id": "",
+      "max_header_gap_s": 0.02,
+      "first_header_ns": 805000000000,
+      "last_header_ns": 858040000000
+    },
+    "/odom_est": {
+      "raw_samples": 52743,
+      "unique_samples": 52743,
+      "duplicate_header_timestamps": 0,
+      "backwards_header_timestamps": 0,
+      "frame_id": "odom_est",
+      "child_frame_id": "base_footprint",
+      "max_header_gap_s": 0.01,
+      "first_header_ns": 805000000000,
+      "last_header_ns": 858050000000
+    }
+  },
+  "sampling_note": "Gaps are observed header gaps; these checks do not prove zero message loss.",
+  "command_validation": {
+    "expected_straight_length_m": 2.0,
+    "expected_turn_angle_deg": 90.0,
+    "duration_tolerance_s": 0.1,
+    "maximum_accepted_pose_gap_s": 0.1,
+    "phases": [
+      {
+        "action": "STOP",
+        "start_ns": 804100000000,
+        "end_ns": 806100000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "STRAIGHT",
+        "start_ns": 806100000000,
+        "end_ns": 819400000000,
+        "linear_m_s": 0.15,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "STOP",
+        "start_ns": 819400000000,
+        "end_ns": 819900000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "LEFT",
+        "start_ns": 819900000000,
+        "end_ns": 823851000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": 0.4
+      },
+      {
+        "action": "STOP",
+        "start_ns": 823851000000,
+        "end_ns": 824350000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "STRAIGHT",
+        "start_ns": 824350000000,
+        "end_ns": 837650000000,
+        "linear_m_s": 0.15,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "STOP",
+        "start_ns": 837650000000,
+        "end_ns": 838150000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "RIGHT",
+        "start_ns": 838150000000,
+        "end_ns": 842100000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": -0.4
+      },
+      {
+        "action": "STOP",
+        "start_ns": 842100000000,
+        "end_ns": 842600000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "STRAIGHT",
+        "start_ns": 842600000000,
+        "end_ns": 855950000000,
+        "linear_m_s": 0.15,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "STOP",
+        "start_ns": 855950000000,
+        "end_ns": 857950000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": 0.0
+      }
+    ]
+  },
+  "source_bag": "/home/ubuntu/tb3_experiment_data/bags/reference_run_01"
+}
