@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
-<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>tb3_localization_lab</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>Wheel odometry and ground-truth evaluation for TurtleBot3.</description>
   <maintainer email="txc632@student.bham.ac.uk">ubuntu</maintainer>
   <license>Apache-2.0</license>
 
@@ -11,6 +10,18 @@
   <depend>sensor_msgs</depend>
   <depend>nav_msgs</depend>
   <depend>geometry_msgs</depend>
+
+  <!-- Packages used by the experiment launch file and bridge configuration. -->
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ros2launch</exec_depend>
+  <exec_depend>ros_gz_sim</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>turtlebot3_gazebo</exec_depend>
+  <exec_depend>rosgraph_msgs</exec_depend>
+  <exec_depend>tf2_msgs</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
