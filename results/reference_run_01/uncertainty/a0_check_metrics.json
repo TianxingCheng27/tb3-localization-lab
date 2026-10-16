@@ -1,0 +1,66 @@
+{
+  "source_bag": "/home/ubuntu/tb3_experiment_data/bags/reference_run_01",
+  "baseline_analysis_dir": "/home/ubuntu/tb3_experiment_data/analysis/reference_run_01",
+  "baseline_source_bag": "/home/ubuntu/tb3_experiment_data/bags/reference_run_01",
+  "baseline_input_sha256": {
+    "comparison.csv": "6528c37216489a7f654b40de9d57d146deadceba20e0c0b8c9fa58408fc89979",
+    "metrics.json": "10fd51d98d2f2a6fb5ae7310979d9ab76335db3b5c4c3614cc078073f613589c"
+  },
+  "replay_script_sha256": "b0d25b57433c513ba549cb2077b62e91be119b8d132b7cc6af09ab2184bc0830",
+  "check_only": false,
+  "bag_metadata_sha256": "136ff5295d99053f112b0f03169ceb5bf6b02dfc8ca7122a1196db88edd61795",
+  "kinematics": {
+    "module": "tb3_localization_lab.kinematics",
+    "source_file": "/home/ubuntu/tb3_localization_ws/src/tb3_localization_lab/tb3_localization_lab/kinematics.py",
+    "source_sha256": "5fa6ccd5d0d6fe79fe03250d38d83bd0a1a7c55572d4f38b457438ad59098500"
+  },
+  "alignment_time_ns": 805100000000,
+  "evaluation_start_ns": 806100000000,
+  "evaluation_end_ns": 857950000000,
+  "evaluation_samples": 2593,
+  "wheel_radius_m": 0.033,
+  "wheel_separation_m": 0.16,
+  "wheel_checks": {
+    "raw_guarded_samples": 53051,
+    "unique_guarded_samples": 53051,
+    "duplicate_header_timestamps": 0,
+    "backwards_header_timestamps": 0,
+    "max_source_gap_s": 0.001,
+    "source_first_header_ns": 805000000000,
+    "source_last_header_ns": 858050000000,
+    "replay_samples": 52851,
+    "t0_interpolated": false,
+    "t1_interpolated": false,
+    "duplicate_policy": "Keep first equivalent duplicate; reject conflicts.",
+    "boundary_policy": "Linear wheel-angle interpolation at t0/t1; no extrapolation.",
+    "angle_assumption": "Named wheel angles accumulate continuously; no modulo conversion.",
+    "scanned_joint_messages": 405702
+  },
+  "initial_state": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "a0_online_consistency": {
+    "position_rmse_m": 1.0330219549168869e-13,
+    "maximum_position_error_m": 1.7455474222635422e-13,
+    "endpoint_position_error_m": 1.7455474222635422e-13,
+    "heading_rmse_deg": 6.7598184983076e-14,
+    "maximum_absolute_heading_error_deg": 3.9438878050147607e-13,
+    "endpoint_absolute_heading_error_deg": 1.0185229405717933e-13,
+    "endpoint_heading_error_deg": 1.0185229405717933e-13
+  },
+  "a0_endpoint_x_m_y_m_yaw_rad": [
+    3.9583381398842468,
+    1.9800029141060258,
+    -0.001670612953757667
+  ],
+  "online_endpoint_x_m_y_m_yaw_rad": [
+    3.9583381398844213,
+    1.9800029141060227,
+    -0.0016706129537594446
+  ],
+  "alignment": "All replays start at zero at t0. The saved fixed GT initial frame is reused. No per-seed alignment or full-path fitting.",
+  "a0_note": "Raw-bag and best-effort online callback grids may differ. Accumulated wheel positions preserve total rotation across skipped samples; piecewise path integration can still differ.",
+  "sampling_note": "Observed source gaps do not prove zero message loss."
+}
