@@ -39,6 +39,7 @@ setup(
     entry_points={
         'console_scripts': [
             'wheel_odometry = tb3_localization_lab.wheel_odometry:main',
+            'encoder_model = tb3_localization_lab.encoder_model:main',
         ],
     },
 )

@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "experiment": "paired online baseline and A3",
+  "alignment_time_ns": 878300000000,
+  "evaluation_start_ns": 879300000000,
+  "evaluation_end_ns": 931150000000,
+  "evaluation_samples": 2593,
+  "read_guard_s": 0.1,
+  "evaluation_sampling": "Same unique GT header timestamps for both estimates; no receive-time alignment.",
+  "alignment": "Each trajectory uses its own inverse initial SE(2) at the same t0; relative-motion evaluation only, with no full-path fitting.",
+  "aligned_gt_endpoint_x_m_y_m_yaw_rad": [
+    4.006916894170378,
+    1.9461485029206145,
+    -0.02295951503234453
+  ],
+  "raw_initial_poses_x_m_y_m_yaw_rad": {
+    "/ground_truth/pose": [
+      -0.014231723012126322,
+      3.0993963569420524e-11,
+      -2.777298196495234e-08
+    ],
+    "/odom_est": [
+      -5.706428213795388e-16,
+      1.1169478981904414e-26,
+      6.013369765168275e-16
+    ],
+    "/odom_noisy": [
+      -1.0109373954315138e-09,
+      4.896698927975743e-17,
+      -1.813225610639951e-08
+    ]
+  },
+  "raw_initial_difference_note": "Raw coordinate diagnostic only; frames need not share an origin.",
+  "topic_checks": {
+    "/ground_truth/pose": {
+      "raw_samples": 2653,
+      "unique_samples": 2653,
+      "duplicate_header_timestamps": 0,
+      "backwards_header_timestamps": 0,
+      "frame_id": "default",
+      "child_frame_id": "",
+      "max_header_gap_s": 0.02,
+      "first_header_ns": 878200000000,
+      "last_header_ns": 931240000000
+    },
+    "/odom_est": {
+      "raw_samples": 52471,
+      "unique_samples": 52471,
+      "duplicate_header_timestamps": 0,
+      "backwards_header_timestamps": 0,
+      "frame_id": "odom_est",
+      "child_frame_id": "base_footprint",
+      "max_header_gap_s": 0.01,
+      "first_header_ns": 878200000000,
+      "last_header_ns": 931250000000
+    },
+    "/odom_noisy": {
+      "raw_samples": 52300,
+      "unique_samples": 52300,
+      "duplicate_header_timestamps": 0,
+      "backwards_header_timestamps": 0,
+      "frame_id": "odom_est",
+      "child_frame_id": "base_footprint",
+      "max_header_gap_s": 0.016,
+      "first_header_ns": 878200000000,
+      "last_header_ns": 931250000000
+    }
+  },
+  "reference_point_assumption": "Gazebo model origin and both base_footprint references coincide in the plane.",
+  "duplicate_policy": "Raw rows retained; last equivalent planar duplicate used; conflicts rejected.",
+  "sampling_note": "Observed header gaps do not prove zero message loss.",
+  "replication": "One recorded simulation run, paired baseline/A3, n=1 per estimate; no SD or confidence interval.",
+  "online_offline_note": "A fixed seed reproduces a fixed accepted input sequence; this new online trajectory need not match a previous offline replay with the same seed.",
+  "uncertainty_note": "Ground truth is used only by this offline evaluator. Coefficients describe an illustrative measurement sensitivity test, not calibrated hardware specifications.",
+  "estimates": {
+    "/odom_est": {
+      "condition": "baseline",
+      "n": 1,
+      "position_rmse_m": 0.006836129656275535,
+      "endpoint_position_error_m": 0.005770489686415526,
+      "heading_rmse_deg": 0.09820633971602835,
+      "endpoint_heading_error_deg": 0.02159584690268457,
+      "maximum_position_error_m": 0.01228282953120983,
+      "maximum_absolute_heading_error_deg": 0.2297560609320533,
+      "aligned_endpoint_x_m_y_m_yaw_rad": [
+        4.001156345417097,
+        1.9464870723848242,
+        -0.022582596399136064
+      ],
+      "raw_initial_minus_gt_x_m_y_m_yaw_rad": [
+        0.014231723012125752,
+        -3.099396356942051e-11,
+        2.7772982566289314e-08
+      ]
+    },
+    "/odom_noisy": {
+      "condition": "online A3",
+      "n": 1,
+      "position_rmse_m": 0.3272268720342827,
+      "endpoint_position_error_m": 0.7107769506976395,
+      "heading_rmse_deg": 10.767754164018594,
+      "endpoint_heading_error_deg": 18.340301147831983,
+      "maximum_position_error_m": 0.710788107796509,
+      "maximum_absolute_heading_error_deg": 18.531197561978765,
+      "aligned_endpoint_x_m_y_m_yaw_rad": [
+        3.610388697644471,
+        2.536037698450543,
+        0.2971391258046188
+      ],
+      "raw_initial_minus_gt_x_m_y_m_yaw_rad": [
+        0.014231722001188926,
+        -3.0993914602431244e-11,
+        9.640725858552829e-09
+      ]
+    }
+  },
+  "command_validation": {
+    "expected_straight_length_m": 2.0,
+    "expected_turn_angle_deg": 90.0,
+    "duration_tolerance_s": 0.1,
+    "duplicate_headers": 5,
+    "backwards_headers": 0,
+    "phases": [
+      {
+        "action": "STOP",
+        "start_ns": 877283000000,
+        "end_ns": 879300000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "STRAIGHT",
+        "start_ns": 879300000000,
+        "end_ns": 892650000000,
+        "linear_m_s": 0.15,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "STOP",
+        "start_ns": 892650000000,
+        "end_ns": 893151000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "LEFT",
+        "start_ns": 893151000000,
+        "end_ns": 897050000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": 0.4
+      },
+      {
+        "action": "STOP",
+        "start_ns": 897050000000,
+        "end_ns": 897550000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "STRAIGHT",
+        "start_ns": 897550000000,
+        "end_ns": 910900000000,
+        "linear_m_s": 0.15,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "STOP",
+        "start_ns": 910900000000,
+        "end_ns": 911400000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "RIGHT",
+        "start_ns": 911400000000,
+        "end_ns": 915350000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": -0.4
+      },
+      {
+        "action": "STOP",
+        "start_ns": 915350000000,
+        "end_ns": 915850000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "STRAIGHT",
+        "start_ns": 915850000000,
+        "end_ns": 929150000000,
+        "linear_m_s": 0.15,
+        "angular_rad_s": 0.0
+      },
+      {
+        "action": "STOP",
+        "start_ns": 929150000000,
+        "end_ns": 931150000000,
+        "linear_m_s": 0.0,
+        "angular_rad_s": 0.0
+      }
+    ]
+  },
+  "maximum_accepted_pose_gap_s": 0.1,
+  "source_bag": "/home/ubuntu/tb3_experiment_data/bags/online_A3_seed0_run_01",
+  "encoder_parameters": {
+    "node_name": "/encoder_model",
+    "parameters": {
+      "use_sim_time": true,
+      "wheel_radius": 0.033,
+      "sigma_1m": 0.002,
+      "left_bias": -0.005,
+      "right_bias": 0.005,
+      "max_source_gap": 0.1,
+      "seed": 0
+    },
+    "source_path": "/home/ubuntu/tb3_experiment_data/configs/online_A3_seed0_run_01.yaml",
+    "sha256": "25d813e3bd37cf27e238d08693c6a02640dcd283bd1068f6c3cc1716dc8ec949",
+    "snapshot_text": "/encoder_model:\n  ros__parameters:\n    left_bias: -0.005\n    max_source_gap: 0.1\n    right_bias: 0.005\n    seed: 0\n    sigma_1m: 0.002\n    start_type_description_service: true\n    use_sim_time: true\n    wheel_radius: 0.033\n\n",
+    "snapshot_note": "User-supplied live-node parameter dump; pose messages do not independently prove that parameters stayed unchanged throughout the run."
+  },
+  "source_code": {
+    "analyse_run": {
+      "path": "/home/ubuntu/tb3_localization_ws/src/tb3_localization_lab/tools/analyse_run.py",
+      "sha256": "1bbace8dfb4d98f1836ffe96c2c07022d9d86c7a6c3a8417182c9c3faf423660"
+    },
+    "inspect_bag": {
+      "path": "/home/ubuntu/tb3_localization_ws/src/tb3_localization_lab/tools/inspect_bag.py",
+      "sha256": "fe7bf333271a6920b111a70598d22a219101577ddc9d15b500630f40fa90717a"
+    },
+    "analyse_online": {
+      "path": "/home/ubuntu/tb3_localization_ws/src/tb3_localization_lab/tools/analyse_online.py",
+      "sha256": "e6789d7ce770b1d2561f08d25e030ba8921fda3b4fa56ad1bd4674aaed395d11"
+    }
+  }
+}
